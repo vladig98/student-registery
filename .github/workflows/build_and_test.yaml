@@ -22,8 +22,8 @@ jobs:
     - name: Install Node packages
       run: npm install
 
-    - name: Build the App
-      run: npm run build
+    - name: Start the App
+      run: npm start &
 
     - name: Test the App
       run: npm test

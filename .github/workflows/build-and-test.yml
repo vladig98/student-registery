@@ -22,8 +22,11 @@ jobs:
     - name: Install Node packages
       run: npm install
 
-    - name: Start the App
+    - name: Start the App in the background
       run: npm start &
+
+    - name: Wait for the App to be ready
+      run: sleep 10 # Adjust the sleep time as needed to ensure the app is ready
 
     - name: Test the App
       run: npm test
